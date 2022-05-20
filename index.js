@@ -33,13 +33,6 @@ const basicArrayAndLooping = () => {
 20
 */
 
-
-
-
-
-
-
-
 //Create an array, and change value
 const changingArrayValue = () => {
     const anArray = ["one", "two", "three", "four", "five",/* Empty -> */ " ", "seven", "eight", "nine", "ten"];
@@ -67,9 +60,6 @@ const changingArrayValue = () => {
 ]
 */
 
-
-
-
 //create an array with new keyword.The two examples above do exactly the same.There is no need to use new Array().
 const array3Function = () => {
     const array3 = new Array("Saab", "Volvo", "BMW");
@@ -88,7 +78,6 @@ const differentArrayValue = () => {
     console.log(anArray);
 }
 //differentArrayValue();
-
 /* output 👇 */
 /* 
 [
@@ -100,7 +89,6 @@ const differentArrayValue = () => {
 
 
 /* --------- ARRAY PROPERTİES AND METHODS --------- */
-
 
 const takeLastValueofAnArray = () => {
     const anArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -115,15 +103,6 @@ const takeLastValueofAnArray = () => {
 /* 
 10
 */
-
-
-
-
-
-
-
-
-
 
 /* --- Looping Array Elements --- */
 
@@ -146,8 +125,6 @@ const arrayAndForLoop = () => {
 5
 */
 
-
-
 const arrayAndForEachLoop = () => {
     const anArray = ["Banana", "Orange", "Apple", "Mango"];
 
@@ -164,8 +141,6 @@ Orange
 Apple
 Mango
 */
-
-
 
 // 2 -) Show values on the page. for loop 
 const forShowOnTheScreen = () => {
@@ -188,11 +163,6 @@ Orange
 Apple
 Mango
 */
-
-
-
-
-
 
 // forEach loop
 // 2 -) Show values on the page.
@@ -217,8 +187,6 @@ Apple
 Mango
 */
 
-
-
 const addElementToEndOfArray = () => {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     /* 
@@ -241,11 +209,6 @@ const addElementToEndOfArray = () => {
 ]
 */
 
-
-
-
-
-
 /* !!! Getting undefined values during adding values to array !!! */
 const gettingUndefinedValues = () => {
     const fruits = ["Banana", "Orange", "Apple"];
@@ -255,45 +218,67 @@ const gettingUndefinedValues = () => {
 }
 //gettingUndefinedValues();
 
-//Getting type arrays
-const recognizeAnArray = () => {
-    const fruits = ["Banana", "Orange", "Apple"];
-    //Wrong way 
-    console.log(typeof (fruits)); //This line gonna return "object" because in JavaScript all arrays are objects.
-    //Right way
-    console.log(Array.isArray(fruits)); //This line can be solution if you want to know what is going on.
+//Getting type of arrays
+const gettingTypeOfAnArray = () => {
+    const fruits = ["Banana", "Kiwi", "Apple"];
+    //Wrong way -> This line gonna return "object" because in JavaScript all arrays are objects.
+    console.log(typeof (fruits));
+    //Right way -> This line can be the solution if you want to know the array or not.
+    console.log(Array.isArray(fruits));
 }
-//recognizeAnArray();
+//gettingTypeOfAnArray();
+
+//output 👇
+/* 
+object
+true
+*/
 
 /* --- ARRAY METHODS --- */
-
 // toString()
 const convertingArrayElementsToString = () => {
     const fruits = ["Banana", "Orange", "Apple", "Mango"];
-    console.log(fruits)
+    console.log(fruits);
     console.log(fruits.toString());
 }
 //convertingArrayElementsToString();
+// output 👇
+/* 
+[ 'Banana', 'Orange', 'Apple', 'Mango' ] -> before toString()
+Banana,Orange,Apple,Mango -> after toString() 
+*/
 
 // join()
-const joinElementBetweenAllElementsInTheArray = () => {
+const addElementBetweenAllElements = () => {
     const fruits = ["Banana", "Orange", "Apple", "Mango"];
     console.log(fruits)
-    console.log(fruits.join(" - ")); // Can take 1 parameter.
+    console.log(fruits.join(" - ")/* <- Can take 1 parameter. */);
+    //While adding elements also converts array elements to String.
 }
-//joinElementBetweenAllElementsInTheArray();
+//addElementBetweenAllElements();
+//output 👇 
+/* 
+[ 'Banana', 'Orange', 'Apple', 'Mango' ]
+Banana - Orange - Apple - Mango
+*/
 
-// pop() - push() Popping items out of an array, or pushing items into an array.
-// pop()
+// pop();
 const removingLastItemFromAnArray = () => {
     const fruits = ["Banana", "Orange", "Apple", "Mango"];
     console.log(fruits);
-    fruits.pop(); //removedLastItem
+    const popped = fruits.pop(); //remove last item
+    console.log(popped); //show removed item 
     console.log(fruits);
 }
 //removingLastItemFromAnArray();
+//output 👇
+/* 
+[ 'Banana', 'Orange', 'Apple', 'Mango' ] -> before pop();
+Mango -> Popped element.
+[ 'Banana', 'Orange', 'Apple' ] -> after pop();
+*/
 
-// push()
+// push() 
 const addingItemsToAnArray = () => {
     const fruits = ["Banana", "Orange", "Apple", "Mango"];
     console.log(fruits);
@@ -306,45 +291,115 @@ const addingItemsToAnArray = () => {
 const removingFirstItemFromAnArray = () => {
     const fruits = ["Banana", "Orange", "Apple", "Mango"];
     console.log(fruits);
-    const fruit = fruits.shift(); // remove element and return removed element
+    // remove first ıtem and return removed ıtem
+    const fruit = fruits.shift();
     console.log(fruit);
     console.log(fruits);
 }
 //removingFirstItemFromAnArray(); 
+// output👇
+/* 
+[ 'Banana', 'Orange', 'Apple', 'Mango' ] -> before shift();
+Banana -> ıtem which removed
+[ 'Orange', 'Apple', 'Mango' ] -> after shift();
+*/
 
 // unshift()
-const addingElementAtTheBeginning = () => {
+const addingItemAtTheBeginning = () => {
     const fruits = ["Banana", "Orange", "Apple", "Mango"];
     console.log(fruits);
-    const fruit = fruits.unshift("Lemon", "kiwi"); //The unshift() method returns the new array length.
+    // method can take multiple parameters👇
+    const fruit = fruits.unshift("Lemon", "kiwi");
+    //The unshift() method returns the new array length.
     console.log(fruit);
     console.log(fruits);
 }
-//addingElementAtTheBeginning();
+//addingItemAtTheBeginning();
+// output👇
+/* 
+[ 'Banana', 'Orange', 'Apple', 'Mango' ] -> before unshift();
+6 -> after unshift() we can take the array length.
+[ 'Lemon', 'kiwi', 'Banana', 'Orange', 'Apple', 'Mango' ] -> result
+*/
 
 // concat()
 const concatingArrays = () => {
-    const myGirls = ["Cecilie", "Lone"]; //array1
-    const myBoys = ["Emil", "Tobias", "Linus"]; //array2
-    const myChildren = myGirls.concat(myBoys); // array1 + array2 = array3
+    //array1
+    const myGirls = ["Cecilie", "Lone"];
+    //array2
+    const myBoys = ["Emil", "Tobias", "Linus"];
+    // array1 + array2 = array3
+    const myChildren = myGirls.concat(myBoys);
     console.log(myChildren);
-    const myFruits = ["apple", "banana", "grape", "kiwi"]; // array4
-    const myEverthings = myChildren.concat(myFruits); // array3 + array4 = array5
+    // array4
+    const myFruits = ["apple", "banana", "grape", "kiwi"];
+    // array3 + array4 = array5
+    const myEverthings = myChildren.concat(myFruits);
     console.log(myEverthings);
-    const mytry = myGirls.concat(myBoys, myFruits); // concat can take multiple parameters
-    console.log(mytry);
-
+    // concat can take multiple parameters
+    const girlsBoysFruits = myGirls.concat(myBoys, myFruits);
+    console.log(girlsBoysFruits);
     const anArray = ["Emil", "Tobias", "Linus"];
-    const addingElementToAnArray = anArray.concat("Peter"); // Also we can add item to an array. (in the end)
+    // Also we can add an item to an array. (in the end)
+    const addingElementToAnArray = anArray.concat("Peter");
     console.log(addingElementToAnArray);
 }
-//concatingArrays();
+concatingArrays();
+// output 👇
+/* 
+[ 'Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus' ]
+[
+  'Cecilie', 'Lone',
+  'Emil',    'Tobias',
+  'Linus',   'apple',
+  'banana',  'grape',
+  'kiwi'
+]
+[
+  'Cecilie', 'Lone',
+  'Emil',    'Tobias',
+  'Linus',   'apple',
+  'banana',  'grape',
+  'kiwi'
+]
+[ 'Emil', 'Tobias', 'Linus', 'Peter' ]
+*/
 
 // splice()
 const spliceArray = () => {
-    const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    console.log(myArray);
-    myArray.splice(1, 9); /* splice taking 3 parameters (startIndex, howManyItemsYouWantToRemove) */
-    console.log(myArray);
+
+    // 1 -) Remove and add element
+    const myArray1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    console.log(myArray1);
+    /* splice can take 2 - 3 parameters or more (startIndex, howManyItemsYouWantToRemove), (newElements) */
+    const spliceMyArray1 = myArray1.splice(1/*startIndex*/, 9/*removeThismuch*/, "new1", "new2", "new3" /*addAllThese*/);
+    console.log(spliceMyArray1);
+    console.log(myArray1);
+
+    // 2 -) Dont remove item but add items
+    const myArray2 = [1, 2, 3, 4, 5, 6];
+    console.log(myArray2);
+    const spliceMyArray2 = myArray2.splice(1, 0, "new1", "new2", "new3")
+    console.log(spliceMyArray2)
+    console.log(myArray2);
 }
 //spliceArray();
+//output 👇
+/* 
+[
+  1, 2, 3, 4,  5,
+  6, 7, 8, 9, 10 
+]
+[
+  2, 3, 4,  5, 6,
+  7, 8, 9, 10
+]
+[ 1, 'new1', 'new2', 'new3' ]
+[ 1, 2, 3, 4, 5, 6 ]
+[]
+[
+  1,      'new1', 'new2',    
+  'new3', 2,      3,
+  4,      5,      6
+]
+*/
