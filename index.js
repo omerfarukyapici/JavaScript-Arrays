@@ -1,5 +1,7 @@
 /* --------- JavaScript Arrays --------- */
 
+//🔔🔔👉👉👇👇👇📌📌📌
+
 //Basic array and looping 
 const basicArrayAndLooping = () => {
     const array1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
@@ -344,7 +346,7 @@ const concatingArrays = () => {
     const addingElementToAnArray = anArray.concat("Peter");
     console.log(addingElementToAnArray);
 }
-concatingArrays();
+//concatingArrays();
 // output 👇
 /* 
 [ 'Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus' ]
@@ -404,5 +406,30 @@ const spliceArray = () => {
 ]
 */
 
-
-console.log(1);
+//slice()
+const sliceArray = () => {
+    const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    /* 
+    Method can take 2 parameters first one is start index
+    and included, second one is finish index and not
+    included to slice output.
+    */
+    const slicing = array.slice(3, 6);
+    console.log(slicing);// Not removing just slicing
+    const slicingTwo = array.slice(-4);// Take last 4 value from array
+    console.log(slicingTwo);
+    const slicingThree = array.slice(1);// Start from 1 and take all
+    console.log(slicingThree);
+    console.log(array);// Same array not messed up
+    const string = "OmerFarukYapici";
+    console.log(string.slice(4));// Can use with string as well
+}
+sliceArray();
+/* 
+output👇
+[4, 5, 6] <- slice array
+[6, 7, 8, 9] <- last 4 value
+[2, 3, 4, 5, 6, 7, 8, 9] <- last 8 value
+[1, 2, 3, 4, 5, 6, 7, 8, 9] <- original array
+FarukYapıcı <- using with string
+*/
