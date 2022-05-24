@@ -4,7 +4,7 @@
 
 //Basic array and looping 
 const basicArrayAndLooping = () => {
-    const array1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    const array1 = [0, 1, 2, 3, 4, 5];
     for (let i = 0; i < array1.length; i++) {
         console.log(array1[i]);
     }
@@ -18,21 +18,6 @@ const basicArrayAndLooping = () => {
 3 
 4 
 5 
-6 
-7 
-8 
-9 
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
 */
 
 //Create an array, and change value
@@ -424,7 +409,7 @@ const sliceArray = () => {
     const string = "OmerFarukYapici";
     console.log(string.slice(4));// Can use with string as well
 }
-sliceArray();
+//sliceArray();
 /* 
 output👇
 [4, 5, 6] <- slice array
@@ -433,3 +418,15 @@ output👇
 [1, 2, 3, 4, 5, 6, 7, 8, 9] <- original array
 FarukYapıcı <- using with string
 */
+
+//copyWithin(target, start, end)
+const copyWithinMethod = (array) => {
+    
+    return array.copyWithin(0, 3, 4);
+}
+//console.log(copyWithinMethod([1, 2, 3, 4, 5]));
+/* 
+output👇
+[ 4, 2, 3, 4, 5 ]
+*/
+
