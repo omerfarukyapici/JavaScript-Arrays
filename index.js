@@ -421,7 +421,7 @@ FarukYapıcı <- using with string
 
 //copyWithin(target, start, end)
 const copyWithinMethod = (array) => {
-    
+
     return array.copyWithin(0, 3, 4);
 }
 //console.log(copyWithinMethod([1, 2, 3, 4, 5]));
@@ -430,3 +430,28 @@ output👇
 [ 4, 2, 3, 4, 5 ]
 */
 
+//at()
+const atMethod = (array, index) => {
+
+    return `Using an index of ${index} the item returned is ${array.at(index)}`;
+}
+console.log(atMethod([1, 2, 3, 4], 3));
+/* 
+output👇
+Using an index of 3 the item returned is 4
+*/
+
+//entries()
+const entriesMethod = array => {
+    //We can access the index of values with entries() method.
+    for (const element of array.entries()) {
+        console.log(element)
+    }
+}
+entriesMethod(["Omer", "Faruk", "Yapici"]);
+/* 
+output👇
+[ 0, 'Omer' ]
+[ 1, 'Faruk' ]
+[ 2, 'Yapici' ]
+*/
