@@ -435,7 +435,7 @@ const atMethod = (array, index) => {
 
     return `Using an index of ${index} the item returned is ${array.at(index)}`;
 }
-console.log(atMethod([1, 2, 3, 4], 3));
+//console.log(atMethod([1, 2, 3, 4], 3));
 /* 
 output👇
 Using an index of 3 the item returned is 4
@@ -448,10 +448,31 @@ const entriesMethod = array => {
         console.log(element)
     }
 }
-entriesMethod(["Omer", "Faruk", "Yapici"]);
+//entriesMethod(["Omer", "Faruk", "Yapici"]);
 /* 
 output👇
 [ 0, 'Omer' ]
 [ 1, 'Faruk' ]
 [ 2, 'Yapici' ]
 */
+
+
+
+
+//every()
+const everyMethod = array => {
+    /* 
+    Every() method is the test for all array elements,
+    If all elements does pass the test, the result is true.
+    If all elements doesn't pass the test, the result will be false. 
+    */
+    return array.every(numbers => {
+        return numbers < 18;
+    })
+}
+console.log(everyMethod([5, 4, 3, 7, 13]));
+/* 
+output👇
+true
+*/
+
