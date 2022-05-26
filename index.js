@@ -473,10 +473,6 @@ output👇
 true
 */
 
-
-
-
-
 //fill()
 const fillMethod = () => {
     const array = ["string", 2, true, ["array"], { name: "object" }];
@@ -487,9 +483,22 @@ const fillMethod = () => {
     arrayTwo.fill("changed", 3/*Start here*/, 4/*Stop here*/);
     console.log(arrayTwo);
 }
-fillMethod()
+//fillMethod()
 /* 
 output👇
 [ 1, 1, 1, 1, 1 ] <- With one parameter
-[ 1, 2, 3, 'changed', 5 ] <- With Three parameters 
+[ 1, 2, 3, 'changed', 5 ] <- With three parameters 
 */
+
+//filter() 
+const filterMethod = () => {
+    const array = [1, 2, 3, 4, 5]; //array
+
+    const filterArray = number => { //filter function
+        return number > 3
+    }
+
+    return array.filter(filterArray); //pass filter function
+
+}
+//console.log(filterMethod());
