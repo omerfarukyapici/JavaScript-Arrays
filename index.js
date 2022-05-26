@@ -456,9 +456,6 @@ output👇
 [ 2, 'Yapici' ]
 */
 
-
-
-
 //every()
 const everyMethod = array => {
     /* 
@@ -470,9 +467,29 @@ const everyMethod = array => {
         return numbers < 18;
     })
 }
-console.log(everyMethod([5, 4, 3, 7, 13]));
+//console.log(everyMethod([5, 4, 3, 7, 13]));
 /* 
 output👇
 true
 */
 
+
+
+
+
+//fill()
+const fillMethod = () => {
+    const array = ["string", 2, true, ["array"], { name: "object" }];
+    array.fill(1); //Change all elements with 1
+    console.log(array);
+
+    const arrayTwo = [1, 2, 3, 4, 5];
+    arrayTwo.fill("changed", 3/*Start here*/, 4/*Stop here*/);
+    console.log(arrayTwo);
+}
+fillMethod()
+/* 
+output👇
+[ 1, 1, 1, 1, 1 ] <- With one parameter
+[ 1, 2, 3, 'changed', 5 ] <- With Three parameters 
+*/
