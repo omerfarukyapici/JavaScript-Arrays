@@ -36,19 +36,19 @@ const characters = [
 const names = characters.map(data => {
     return data.name;
 });
-console.log(names);
+//console.log(names);
 //2 -) Get an array of all heights
 const heights = characters.map(data => data.height);
-console.log(heights);
+//console.log(heights);
 //3 -) Get an array of objects with just name and height properties
 const namesHeights = characters.map(data => ({
     name: data.name,
     height: data.height
 }));
-console.log(namesHeights)
+//console.log(namesHeights)
 //4 -) Get an array of all first names
 const firstNames = characters.map(data => data.name.split(" ")[0]);
-console.log(firstNames)
+//console.log(firstNames)
 
 //reduce()
 //1 -) Get the total mass of all characters
@@ -81,6 +81,21 @@ const filterFemaleCharacter = characters.filter(characters => {
 
 //sort()
 //1 -) Sort by name
+
+const sortNameCharacter = () => {
+    const array = [1,2,3,4,5];
+    array.sort();
+    const array1 = ["one", "two", "three", "four", "five"];
+    const array2 = [1,2,3,4,5,6,7];
+    array1.sort();
+    array2.reverse();
+    console.log(array2);
+    array1.reverse();
+    array.reverse(); // This method reverse the array elements.
+    return console.log(array, array1);
+}
+sortNameCharacter();
+
 //2 -) Sort by mass
 //3 -) Sort by height
 //4 -) Sort by gender

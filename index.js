@@ -1,6 +1,6 @@
 /* --------- JavaScript Arrays --------- */
 
-//🔔🔔👉👉👇👇👇📌📌📌
+//🔔🔔👉👉👇👇c📌📌📌
 
 //Basic array and looping 
 const basicArrayAndLooping = () => {
@@ -490,15 +490,22 @@ output👇
 [ 1, 2, 3, 'changed', 5 ] <- With three parameters 
 */
 
+
+
+
+
+
 //filter() 
-const filterMethod = () => {
-    const array = [1, 2, 3, 4, 5]; //array
+const filterMethod = array => {
 
     const filterArray = number => { //filter function
         return number > 3
     }
 
     return array.filter(filterArray); //pass filter function
-
 }
-//console.log(filterMethod());
+console.log(filterMethod([1, 2, 3, 4, 5]));
+/* 
+output👇
+[ 4, 5 ] 
+*/
