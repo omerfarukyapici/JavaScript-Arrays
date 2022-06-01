@@ -490,11 +490,6 @@ output👇
 [ 1, 2, 3, 'changed', 5 ] <- With three parameters 
 */
 
-
-
-
-
-
 //filter() 
 const filterMethod = array => {
 
@@ -504,8 +499,29 @@ const filterMethod = array => {
 
     return array.filter(filterArray); //pass filter function
 }
-console.log(filterMethod([1, 2, 3, 4, 5]));
+//console.log(filterMethod([1, 2, 3, 4, 5]));
 /* 
 output👇
 [ 4, 5 ] 
+*/
+
+
+
+
+//find()
+const findMethod = () => {
+    const persons = [
+        { name: 'Luke Skywalker', height: '172', },
+        { name: 'Darth Vader', height: '202', },
+        { name: 'Anakin Skywalker', height: '188', },
+    ];
+    const findTallGuy = person => { //find function
+        return person.height > 200
+    }
+    return persons.find(findTallGuy) //pass function
+}
+console.log(findMethod());
+/* 
+output👇
+{ name: 'Darth Vader', height: '202' }
 */
