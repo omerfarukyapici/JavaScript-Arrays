@@ -1,6 +1,6 @@
 /* --------- JavaScript Arrays --------- */
 
-//🔔🔔👉👉👇👇c📌📌📌
+//🔔🔔👉👉👇👇👇📌📌📌
 
 //Basic array and looping 
 const basicArrayAndLooping = () => {
@@ -505,9 +505,6 @@ output👇
 [ 4, 5 ] 
 */
 
-
-
-
 //find()
 const findMethod = () => {
     const persons = [
@@ -520,8 +517,35 @@ const findMethod = () => {
     }
     return persons.find(findTallGuy) //pass function
 }
-console.log(findMethod());
+//console.log(findMethod());
 /* 
 output👇
 { name: 'Darth Vader', height: '202' }
 */
+
+
+
+//map()
+const persons = [
+    { name: 'Luke Skywalker', height: '172', },
+    { name: 'Darth Vader', height: '202', },
+    { name: 'Anakin Skywalker', height: '188', },
+];
+const mapMethod = array => {
+    array.map(data => {
+        console.log(data.name);
+    })
+}
+mapMethod(persons);
+/* 
+output👇
+Luke Skywalker
+Darth Vader
+Anakin Skywalker
+*/
+
+
+
+
+
+
