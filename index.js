@@ -536,10 +536,16 @@ const mapMethod = array => {
         console.log(data.name);
     })
 }
-mapMethod(persons);
+//mapMethod(persons);
 /* 
 output👇
 Luke Skywalker
 Darth Vader
 Anakin Skywalker
 */
+
+//from()
+const fromMethod = text => {
+    console.log(Array.from(text));
+}
+fromMethod("FROMMETHOD");
