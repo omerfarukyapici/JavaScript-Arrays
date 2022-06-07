@@ -544,8 +544,26 @@ Darth Vader
 Anakin Skywalker
 */
 
+
 //from()
-const fromMethod = text => {
+const fromMethod = () => {
+    const text = "123456789";
+    /* w/one parameter */
     console.log(Array.from(text));
+    /* w/two parameters */
+    console.log(Array.from(text, i => Number(i)));
+    /* Another way */
+    const numbers = [1, 2, 3, 2, 3, 4, 5, 5, 5,];
+    const removeDuplicates = new Set(numbers);
+    console.log(removeDuplicates);
+    const removeDuplicatesAndConvertToArray = Array.from(new Set(numbers));
+    console.log(removeDuplicatesAndConvertToArray);
 }
-fromMethod("FROMMETHOD");
+fromMethod();
+/* 
+output👇
+['1', '2', '3', '4', '5', '6', '7', '8', '9'] -> one parameter
+[1, 2, 3, 4, 5, 6, 7, 8, 9] -> two parameters
+Set(5) { 1, 2, 3, 4, 5 } -> w/new Set()
+[ 1, 2, 3, 4, 5 ] -> w/Array.from(new Set())
+*/
