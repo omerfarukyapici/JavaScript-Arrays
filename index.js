@@ -544,7 +544,6 @@ Darth Vader
 Anakin Skywalker
 */
 
-
 //from()
 const fromMethod = () => {
     const text = "123456789";
@@ -559,11 +558,25 @@ const fromMethod = () => {
     const removeDuplicatesAndConvertToArray = Array.from(new Set(numbers));
     console.log(removeDuplicatesAndConvertToArray);
 }
-fromMethod();
+//fromMethod();
 /* 
 output👇
 ['1', '2', '3', '4', '5', '6', '7', '8', '9'] -> one parameter
 [1, 2, 3, 4, 5, 6, 7, 8, 9] -> two parameters
 Set(5) { 1, 2, 3, 4, 5 } -> w/new Set()
 [ 1, 2, 3, 4, 5 ] -> w/Array.from(new Set())
+*/
+
+//includes()
+const array = [1, 2, 3, 4, 5];
+const string = "OmerFarukYapici";
+const includesMethod = (array, string, forArray, forString) => {
+    console.log(array.includes(forArray)); 
+    console.log(string.includes(forString)); 
+}
+includesMethod(array, string, 3, "Faruk");
+/* 
+output👇
+true -> Array check
+true -> String check
 */
