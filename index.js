@@ -571,12 +571,30 @@ Set(5) { 1, 2, 3, 4, 5 } -> w/new Set()
 const array = [1, 2, 3, 4, 5];
 const string = "OmerFarukYapici";
 const includesMethod = (array, string, forArray, forString) => {
-    console.log(array.includes(forArray)); 
-    console.log(string.includes(forString)); 
+    console.log(array.includes(forArray));
+    console.log(string.includes(forString));
 }
-includesMethod(array, string, 3, "Faruk");
+//includesMethod(array, string, 3, "Faruk");
 /* 
 output👇
 true -> Array check
 true -> String check
+*/
+
+
+
+
+//Object.keys()
+const objectKeysMethod = (array, string, object) => {
+    const dataTypes = [array, string, object];
+    for (let i = 0; i < dataTypes.length; i++) {
+        console.log(Object.keys(dataTypes[i]))
+    }
+}
+objectKeysMethod(["CPU", "GPU", "RAM"], "CPU", {0: 'a',1: 'b',2: 'c'});
+/* 
+output👇
+[ '0', '1', '2' ] -> array
+[ '0', '1', '2' ] -> string
+[ '0', '1', '2' ] -> object
 */
