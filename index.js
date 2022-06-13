@@ -581,9 +581,6 @@ true -> Array check
 true -> String check
 */
 
-
-
-
 //Object.keys()
 const objectKeysMethod = (array, string, object) => {
     const dataTypes = [array, string, object];
@@ -591,10 +588,11 @@ const objectKeysMethod = (array, string, object) => {
         console.log(Object.keys(dataTypes[i]))
     }
 }
-objectKeysMethod(["CPU", "GPU", "RAM"], "CPU", {0: 'a',1: 'b',2: 'c'});
+//objectKeysMethod(["CPU", "GPU", "RAM"], "CPU", {0: 'a',1: 'b',2: 'c'});
 /* 
 output👇
 [ '0', '1', '2' ] -> array
 [ '0', '1', '2' ] -> string
 [ '0', '1', '2' ] -> object
 */
+
