@@ -1,5 +1,7 @@
 /* --------- JavaScript Arrays --------- */
 
+const { totalmem } = require("os");
+
 //🔔🔔👉👉👇👇👇📌📌📌
 
 //Basic array and looping 
@@ -595,4 +597,23 @@ output👇
 [ '0', '1', '2' ] -> string
 [ '0', '1', '2' ] -> object
 */
+
+
+
+
+
+//reduce() 
+const reduceArray = [1, 2, 3, 4, 5];
+const reduceMethod = (array, value) => {
+
+    return array.reduce((a, b) => (a + b), value);
+};
+console.log(reduceMethod(reduceArray, 0));
+console.log(reduceMethod(reduceArray, 10));
+/* 
+output👇
+15 -> initial value is 0
+25 -> initial value is 10
+*/
+
 
