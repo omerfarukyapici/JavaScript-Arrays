@@ -598,10 +598,6 @@ output👇
 [ '0', '1', '2' ] -> object
 */
 
-
-
-
-
 //reduce() 
 const reduceArray = [1, -2, 3, 4, 5];
 const reduceMethod = (array, value) => {
@@ -615,5 +611,3 @@ output👇
 11 -> initial value is 0
 21 -> initial value is 10
 */
-
-
