@@ -570,7 +570,7 @@ Set(5) { 1, 2, 3, 4, 5 } -> w/new Set()
 */
 
 //includes()
-const array = [1, 2, 3, 4, 5];
+//const array = [1, 2, 3, 4, 5];
 const string = "OmerFarukYapici";
 const includesMethod = (array, string, forArray, forString) => {
     console.log(array.includes(forArray));
@@ -604,10 +604,39 @@ const reduceMethod = (array, value) => {
 
     return array.reduce((a, b) => (a + b), value);
 };
-console.log(reduceMethod(reduceArray, 0));
-console.log(reduceMethod(reduceArray, 10));
+//console.log(reduceMethod(reduceArray, 0));
+//console.log(reduceMethod(reduceArray, 10));
 /* 
 output👇
 11 -> initial value is 0
 21 -> initial value is 10
+*/
+
+//reverse()
+const reverseMethod = array => {
+    return array.reverse();
+}
+//console.log(reverseMethod([1, 2, 3, 4, 5]));
+/* 
+output👇
+[ 5, 4, 3, 2, 1 ]
+*/
+
+//sort()
+const arrays = {
+    arr1: [10, 3, 4, 1],
+    arr2: [12, 32, 56, 89, 102],
+    arr3: [51, 41, 31, 21, 11, 52, 42, 32, 22, 12]
+}
+const sortMethod = array => {
+    return array.sort();
+}
+//console.log(sortMethod(arrays.arr1));
+//console.log(sortMethod(arrays.arr2));
+//console.log(sortMethod(arrays.arr3)); 
+/* 
+output👇
+[ 1, 10, 3, 4 ] -> arr1
+[ 102, 12, 32, 56, 89 ] -> arr2
+[ 11, 12, 21, 22, 31, 32, 41, 42, 51, 52 ] -> arr3
 */
