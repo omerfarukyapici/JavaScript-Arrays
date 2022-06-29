@@ -42,11 +42,39 @@ true    -> After split() method we have an array
 
 //trim()
 const trimString = "   This is a string.   ";
-console.log(trimString);
+//console.log(trimString);
 const result = trimString.trim();
-console.log(result);
+//console.log(result);
 /* 
 output👇
 "   This is a string.   " -> Before trim() method.
 "This is a string." -> After trim() method.
 */
+
+/* JavaScript set methods */
+
+//add()
+function addMethod() {
+    const dataTypes = {
+        string: "Coffee",
+        array: [1, 2, 3],
+        object: {name: "Ömer", lastName: "Yapici"},
+        function: async () => { return "I'am a async" },
+        function2:  () => { return "I'am a sync" },
+        number: 20,
+        boolean: true,
+    }
+    const set1 = new Set();
+    set1.add(dataTypes.string);
+    set1.add(dataTypes.array);
+    set1.add(dataTypes.object);
+    set1.add(dataTypes.function());
+    set1.add(dataTypes.function2());
+    set1.add(dataTypes.number);
+    set1.add(dataTypes.boolean);
+
+    for (const i of set1) {
+        console.log(i);
+    }
+}
+addMethod();
