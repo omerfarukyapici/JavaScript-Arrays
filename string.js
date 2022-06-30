@@ -51,30 +51,20 @@ output👇
 "This is a string." -> After trim() method.
 */
 
-/* JavaScript set methods */
+/* JavaScript Set(){} object */
 
-//add()
-function addMethod() {
-    const dataTypes = {
-        string: "Coffee",
-        array: [1, 2, 3],
-        object: {name: "Ömer", lastName: "Yapici"},
-        function: async () => { return "I'am a async" },
-        function2:  () => { return "I'am a sync" },
-        number: 20,
-        boolean: true,
-    }
-    const set1 = new Set();
-    set1.add(dataTypes.string);
-    set1.add(dataTypes.array);
-    set1.add(dataTypes.object);
-    set1.add(dataTypes.function());
-    set1.add(dataTypes.function2());
-    set1.add(dataTypes.number);
-    set1.add(dataTypes.boolean);
 
-    for (const i of set1) {
-        console.log(i);
-    }
-}
-addMethod();
+
+
+
+//Set() object
+const mySet = new Set([0, -7, 38, 4]); //Create a Set object
+
+mySet.add(-20); //Add value in the set.
+mySet.has(2); //Check if it has value (true or false).
+mySet.forEach(value => (value)); //Return values.
+mySet.forEach(value => (mySet.delete(value))); //Delete values.
+mySet.clear(); //Clear values.
+
+
+
