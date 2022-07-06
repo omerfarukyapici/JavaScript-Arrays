@@ -1,5 +1,6 @@
 //🔔🔔👉👉👇👇👇📌📌📌
 
+const { color } = require("matrix-rain/ansi");
 const { type } = require("os");
 
 //toLowerCase(), toUpperCase()
@@ -43,7 +44,7 @@ true    -> After split() method we have an array
 //trim()
 const trimString = "   This is a string.   ";
 //console.log(trimString);
-const result = trimString.trim();
+//const result = trimString.trim();
 //console.log(result);
 /* 
 output👇
@@ -53,10 +54,6 @@ output👇
 
 /* JavaScript Set(){} object */
 
-
-
-
-
 //Set() object
 const mySet = new Set([0, -7, 38, 4]); //Create a Set object
 
@@ -65,6 +62,4 @@ mySet.has(2); //Check if it has value (true or false).
 mySet.forEach(value => (value)); //Return values.
 mySet.forEach(value => (mySet.delete(value))); //Delete values.
 mySet.clear(); //Clear values.
-
-
 
