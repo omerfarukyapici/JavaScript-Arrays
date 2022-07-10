@@ -60,6 +60,27 @@ typeFive();
 
 
 
+/* Variables */
+
+//when you use var, you can declare the same variable as many times as you like, but with let you can't.
+
+
+var fruit = "Apple";
+// output 👉 Apple
+var fruit = "Pineapple";
+// output 👉 Pineapple
+
+
+let hardware = "CPU";
+// output 👉 CPU
+hardware = "GPU";
+// output 👉 GPU
+
+
+const century = 21;
+// output 👉 21
+century = 22;
+// ❌ fail
 
 
 
