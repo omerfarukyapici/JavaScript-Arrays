@@ -36,7 +36,7 @@ const typeOne = () => "Arrow functions";
 typeOne();
 // output 👉 Arrow functions 
 
-/* One parameter */ 
+/* One parameter */
 const typeTwo = n => n + 3;
 typeTwo(4);
 // output 👉 7
@@ -52,19 +52,16 @@ typeFour("JavaScript");
 // output 👉 JavaScript
 
 /* Multiple lines with "{}" and the "return" keyword */
-const typeFive = () => { 
-    return "Hello world"; 
+const typeFive = () => {
+    return "Hello world";
 }
 typeFive();
 // output 👉 Hello world
 
 
-
 /* Variables */
 
 //when you use var, you can declare the same variable as many times as you like, but with let you can't.
-
-
 var fruit = "Apple";
 // output 👉 Apple
 var fruit = "Pineapple";
@@ -79,12 +76,8 @@ hardware = "GPU";
 
 const century = 21;
 // output 👉 21
-century = 22;
+//century = 22;
 // ❌ fail
-
-
-
-
 
 
 
@@ -113,4 +106,33 @@ async function asyncFunction() {
     console.log(newOne);
 }
 //asyncFunction();
+
+
+// JavaScript basic class structure
+class Language {
+    constructor(name, year, oop) {
+        this.name = name,
+        this.year = year,
+        this.oop = oop
+    }
+}
+
+const JavaScript = new Language("JavaScript", 1995, true);
+const Python = new Language("Python", 1990, true);
+const Ruby = new Language("Ruby", 1995, true);
+
+console.log(JavaScript, Python, Ruby);
+
+/* 
+output👇
+Language { name: 'JavaScript', year: 1995, oop: true } 
+Language { name: 'Python', year: 1990, oop: true } 
+Language { name: 'Ruby', year: 1995, oop: true }
+*/
+
+
+
+
+
+
 
