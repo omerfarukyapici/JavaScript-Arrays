@@ -117,11 +117,11 @@ class Language {
     }
 }
 
-const JavaScript = new Language("JavaScript", 1995, true);
-const Python = new Language("Python", 1990, true);
-const Ruby = new Language("Ruby", 1995, true);
+const language1 = new Language('JavaScript', 1995, true);
+const language2 = new Language('Python', 1990, true);
+const language3 = new Language('Ruby', 1995, true);
 
-console.log(JavaScript, Python, Ruby);
+console.log(language1, language2, language3);
 
 /* 
 output👇
