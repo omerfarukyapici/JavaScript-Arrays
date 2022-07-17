@@ -131,7 +131,7 @@ Language { name: 'Ruby', year: 1995, oop: true }
 */
 
 
-//JavaScript Prototype methods
+//JavaScript Prototype method
 class Developer {
     constructor(firstName, lastName){
         this.firstName = firstName,
@@ -145,11 +145,11 @@ class Developer {
 
     //Method
     concatNames() {
-        return this.firstName + " " + this.lastName;
+        return this.firstName + ' ' + this.lastName;
     }
 }
 
-const Developer1 = new Developer("Omer Faruk", "Yapici");
+const Developer1 = new Developer('John', 'Dee');
 
 console.log(Developer1.fullName);
-//output 👉 Omer Faruk Yapici
+//output 👉 John Dee
