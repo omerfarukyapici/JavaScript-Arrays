@@ -121,7 +121,7 @@ const language1 = new Language('JavaScript', 1995, true);
 const language2 = new Language('Python', 1990, true);
 const language3 = new Language('Ruby', 1995, true);
 
-console.log(language1, language2, language3);
+//console.log(language1, language2, language3);
 
 /* 
 output👇
@@ -131,8 +131,25 @@ Language { name: 'Ruby', year: 1995, oop: true }
 */
 
 
+//JavaScript Prototype methods
+class Developer {
+    constructor(firstName, lastName){
+        this.firstName = firstName,
+        this.lastName = lastName
+    }
 
+    //Getter
+    get fullName() {
+        return this.concatNames();
+    }
 
+    //Method
+    concatNames() {
+        return this.firstName + " " + this.lastName;
+    }
+}
 
+const Developer1 = new Developer("Omer Faruk", "Yapici");
 
-
+console.log(Developer1.fullName);
+//output 👉 Omer Faruk Yapici
