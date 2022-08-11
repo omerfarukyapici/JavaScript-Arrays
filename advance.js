@@ -151,5 +151,8 @@ class Developer {
 
 const Developer1 = new Developer('John', 'Dee');
 
-console.log(Developer1.fullName);
+//console.log(Developer1.fullName);
 //output 👉 John Dee
+
+
+const newOne = "asdf";
