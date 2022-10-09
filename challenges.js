@@ -12,3 +12,24 @@ const removeFirstFive = a => {
 output👇
 arukyapici
 */
+
+
+
+
+//Sum array values
+function sumArray(arr) {
+    let sum = 0;
+    for (const value of arr) {
+        sum += value
+    }
+    return sum;
+}
+
+const result1 = sumArray([1, 2, 3, 10, 19]);
+console.log(result1);
+//output 👉 35
+
+const myArray = [9, 7, 4, 3];
+const result2 = sumArray(myArray);
+console.log(result2);
+//output 👉 23

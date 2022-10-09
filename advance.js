@@ -112,8 +112,8 @@ async function asyncFunction() {
 class Language {
     constructor(name, year, oop) {
         this.name = name,
-        this.year = year,
-        this.oop = oop
+            this.year = year,
+            this.oop = oop
     }
 }
 
@@ -133,9 +133,9 @@ Language { name: 'Ruby', year: 1995, oop: true }
 
 //JavaScript Prototype method
 class Developer {
-    constructor(firstName, lastName){
+    constructor(firstName, lastName) {
         this.firstName = firstName,
-        this.lastName = lastName
+            this.lastName = lastName
     }
 
     //Getter
@@ -153,6 +153,3 @@ const Developer1 = new Developer('John', 'Dee');
 
 //console.log(Developer1.fullName);
 //output 👉 John Dee
-
-
-const newOne = "asdf";
