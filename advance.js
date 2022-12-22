@@ -153,3 +153,57 @@ const Developer1 = new Developer('John', 'Dee');
 
 //console.log(Developer1.fullName);
 //output 👉 John Dee
+
+
+//three dots (…) 
+let array = ["Omer", "Faruk", "Yapici"];
+let arrayObject = { ...array };
+/* console.table(arrayObject)
+console.log(arrayObject)
+console.log(array) */
+
+const adrian = {
+    fullName: 'Adrian Oprea',
+    occupation: 'Software developer',
+    age: 31,
+    website: 'https://oprea.rocks'
+};
+
+const bill = {
+    ...adrian,
+    fullName: 'Bill Gates',
+    website: 'https://microsoft.com'
+};
+
+/* console.log(adrian)
+console.log(bill) */
+
+
+const numbers1 = [1, 2, 3, 4, 5];
+const numbers2 = [...numbers1, 1, 2, 6, 7, 8]; // this will be [1, 2, 3, 4, 5, 1, 2, 6, 7, 8]
+/* console.log(numbers2) */
+
+
+function sum(...numbers) {
+    return numbers.reduce((accumulator, current) => {
+        return accumulator += current
+    });
+};
+sum(1, 2) // 3
+console.log(sum(1, 2, 10, 23));
+
+
+
+function sum(...theArgs) {
+    let total = 0;
+    for (const arg of theArgs) {
+        total += arg;
+    }
+    return total;
+}
+
+/* console.log(sum(1, 2, 3)); */
+// expected output: 6
+
+/* console.log(sum(1, 2, 3, 4)); */
+  // expected output: 10
